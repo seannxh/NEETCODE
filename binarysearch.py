@@ -47,7 +47,7 @@ matrix = [[1,2,4,8],[10,11,12,13],[14,20,30,40]]
 target = 13
 
 def searchMatrix(matrix, target):
-        #Dobule bianry search
+    #Dobule bianry search
 
     rows, cols = (len(matrix)),   len(matrix[0])
     print(len(matrix[0]))
@@ -123,7 +123,7 @@ else:
 count = 5
 k = 3
 p = 5
-count += math.ceil(float(p) / k)
+count += math.ceil(float(p) / k) #This gets the the number round higher 
 print(count)
 
 print(math.ceil(5))
