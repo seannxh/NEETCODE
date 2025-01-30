@@ -16,16 +16,14 @@ class Solution:
 #Valid Anagram
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        countS = [0] * 26
-        countT = [0] * 26
+        countS = [0] * 26 
 
-        for char in s:
+        for idx, char in enumerate(s):
             countS[ord(char) - ord("a")] += 1
-        
-        for char2 in t:
-            countT[ord(char2) - ord("a")] += 1
+            countS[ord(t[idx]) - ord("a")] -= 1
 
-        return countS == countT
+        return sum(countS) == 0
+    
 #Two Sum
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -77,8 +75,6 @@ class Solution:
             res += str(len(word)) + "#" + word
         return res
             
-        
-
     def decode(self, s: str) -> List[str]:
         i = 0
         res = []
