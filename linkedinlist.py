@@ -205,3 +205,17 @@ class Solution:
         return False
 
                 
+#Fast and slow pointers
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        
+class FastandSlow:
+    def middleOfList(self, head):
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow

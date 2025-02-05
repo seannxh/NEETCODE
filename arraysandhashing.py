@@ -144,3 +144,9 @@ class Solution:
                     length += 1
                 longest = max(length, longest)
         return longest
+n = 10
+step = 2 if n % 2 == 0 else 1
+res = [i for i in range(1, n + 2, step)]
+
+
+print(res)
